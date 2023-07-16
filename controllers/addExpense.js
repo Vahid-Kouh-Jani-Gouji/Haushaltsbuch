@@ -6,6 +6,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
       
           // Get form values
           var amount = document.getElementById("amount").value;
+         
           var date = document.getElementById("date").value;
           var repeat = document.getElementById("repeat").value;
           var category = document.getElementById("category").value;

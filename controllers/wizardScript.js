@@ -1,5 +1,5 @@
 // Retrieve existing transactions from localStorage or initialize an empty array
-var transactions = JSON.parse(localStorage.getItem("wizardData")) || [];
+var transactions =  []; //JSON.parse(localStorage.getItem("wizardData")) ||
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -106,11 +106,7 @@ function saveFormData() {
               expensesCategories: expensesCategories
           };
       
-          // Convert data object to JSON
-          // var jsonData = JSON.stringify(data);
-      
-          // Save JSON data to localStorage
-          // localStorage.setItem("formData", jsonData);
+          
 
            // Add new transaction to the array
            transactions.push(data);

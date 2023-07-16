@@ -6,8 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
           
           // Retrieve existing transactions from localStorage or initialize an empty array
           var wizardData = JSON.parse(localStorage.getItem("wizardData")) ;
-          var transactions = JSON.parse(localStorage.getItem("transactions")) ;
           
+          var expenseSum = JSON.parse(localStorage.getItem("expenseSum")) ;
+          var expenseValue = parseFloat(expenseSum);
+         
+          var sum = 0 ;
+
+
 
           var tableBody = document.querySelector("#data-table tbody");
 
@@ -25,49 +30,30 @@ document.addEventListener("DOMContentLoaded", function() {
             row.appendChild(cell);
         });
 
+        var amountValue = parseFloat(data.balance); // Parse amount as a number
+                    
+
+        // Update the sum
+        sum += amountValue;
+
         tableBody.appendChild(row);
     });
-    // Retrieve data from localStorage
-        //   var storedData = localStorage.getItem("formData");
-        //   var parsedData = JSON.parse(storedData);
-      
-          // Get the table body element
-        //   var tableBody = document.querySelector("#data-table tbody");
-      
-          // Create a row for the data
-        //   var row = document.createElement("tr");
-      
-          // Create cells for each property in the data object
-        //   var balanceCell = document.createElement("td");
-        //   balanceCell.textContent = parsedData.balance;
-        //   row.appendChild(balanceCell);
-      
-        //   var incomeCategoriesCell = document.createElement("td");
-        //   var incomeCategoriesList = document.createElement("ul");
-      
-        //   parsedData.incomeCategories.forEach(function(category) {
-        //       var listItem = document.createElement("li");
-        //       listItem.textContent = category;
-        //       incomeCategoriesList.appendChild(listItem);
-        //   });
-      
-        //   incomeCategoriesCell.appendChild(incomeCategoriesList);
-        //   row.appendChild(incomeCategoriesCell);
-      
-        //   var expensesCategoriesCell = document.createElement("td");
-        //   var expensesCategoriesList = document.createElement("ul");
-      
-        //   parsedData.expensesCategories.forEach(function(category) {
-        //       var listItem = document.createElement("li");
-        //       listItem.textContent = category;
-        //       expensesCategoriesList.appendChild(listItem);
-        //   });
-      
-        //   expensesCategoriesCell.appendChild(expensesCategoriesList);
-        //   row.appendChild(expensesCategoriesCell);
-      
-          // Add the row to the table body
-        //   tableBody.appendChild(row);
+    sum -= expenseValue ;
+    // Create a new row for the sum
+    var sumRow = document.createElement("tr");
+
+    // Create an empty cell for the label
+    var labelCell = document.createElement("td");
+    labelCell.textContent = "Total Sum:";
+    sumRow.appendChild(labelCell);
+
+    // Create a cell for the sum value
+    var sumCell = document.createElement("td");
+    sumCell.textContent = sum;
+    sumRow.appendChild(sumCell);
+
+    // Append the sum row to the table body
+    tableBody.appendChild(sumRow);
 });
       
       

@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
           var tableBody = document.querySelector("#data-table tbody");
 
-    // Clear table body
-    tableBody.innerHTML = "";
-    var sum = 0;
+          // Clear table body
+          tableBody.innerHTML = "";
+          var sum = 0;
 
-    // Loop through transactions array and create rows
+          // Loop through transactions array and create rows
 
           transactions.forEach(function(transaction, index) {
                     var row = document.createElement("tr");
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     // Update the sum
                     sum += amountValue;
+                    localStorage.setItem("expenseSum", JSON.stringify(sum));
           
                     // Create actions cell
                     var actionsCell = document.createElement("td");
@@ -73,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
           
       
  });
-
+// Function to edit a transaction
  function openEditModal(index) {
           var modal = document.getElementById("editModal");
           var closeBtn = document.getElementsByClassName("close")[0];
