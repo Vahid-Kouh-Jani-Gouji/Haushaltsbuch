@@ -1,9 +1,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-          // Retrieve data from localStorage
-          // var storedData = localStorage.getItem("transactionData");
-          // var parsedData = JSON.parse(storedData);
+          
           
           // Retrieve existing transactions from localStorage or initialize an empty array
           var transactions = JSON.parse(localStorage.getItem("transactions")) ;
@@ -12,20 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Clear table body
     tableBody.innerHTML = "";
+    var sum = 0;
 
     // Loop through transactions array and create rows
-//     transactions.forEach(function(transaction) {
-//         var row = document.createElement("tr");
-          
-//         // Create cells for each property in the transaction object
-//         Object.values(transaction).forEach(function(value) {
-//             var cell = document.createElement("td");
-//             cell.textContent = value;
-//             row.appendChild(cell);
-//         });
 
-//         tableBody.appendChild(row);
-//     });
           transactions.forEach(function(transaction, index) {
                     var row = document.createElement("tr");
           
@@ -34,6 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     cell.textContent = value;
                     row.appendChild(cell);
                     });
+                    
+                    var amountValue = parseFloat(transaction.amount); // Parse amount as a number
+                    
+
+                    // Update the sum
+                    sum += amountValue;
           
                     // Create actions cell
                     var actionsCell = document.createElement("td");
@@ -59,38 +53,25 @@ document.addEventListener("DOMContentLoaded", function() {
                     tableBody.appendChild(row);
           });
 
+          // Create a new row for the sum
+          var sumRow = document.createElement("tr");
+
+          // Create an empty cell for the label
+          var labelCell = document.createElement("td");
+          labelCell.textContent = "Total Sum:";
+          sumRow.appendChild(labelCell);
+
+          // Create a cell for the sum value
+          var sumCell = document.createElement("td");
+          sumCell.textContent = sum;
+          sumRow.appendChild(sumCell);
+
+          // Append the sum row to the table body
+          tableBody.appendChild(sumRow);
+
       
           
       
-          // Get the table body element
-          // var tableBody = document.querySelector("#data-table tbody");
-      
-          // Create a row for the data
-          // var row = document.createElement("tr");
-      
-          // Create cells for each property in the data object
-          // var amountCell = document.createElement("td");
-          // amountCell.textContent = parsedData.amount;
-          // row.appendChild(amountCell);
-      
-          // var dateCell = document.createElement("td");
-          // dateCell.textContent = parsedData.date;
-          // row.appendChild(dateCell);
-      
-          // var repeatCell = document.createElement("td");
-          // repeatCell.textContent = parsedData.repeat;
-          // row.appendChild(repeatCell);
-      
-          // var categoryCell = document.createElement("td");
-          // categoryCell.textContent = parsedData.category;
-          // row.appendChild(categoryCell);
-      
-          // var commentCell = document.createElement("td");
-          // commentCell.textContent = parsedData.comment;
-          // row.appendChild(commentCell);
-      
-          // Add the row to the table body
-          // tableBody.appendChild(row);
  });
 
  function openEditModal(index) {
