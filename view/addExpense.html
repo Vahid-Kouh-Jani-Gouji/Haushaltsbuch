@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="../src/style.css">
+          
+          <title>Add expense</title>
+          <script src="../controllers/addExpense.js"  async defer></script>
+</head>
+<body>
+          <div class="header1"> Add expense</div>
+         
+          <div id="screen"></div>
+          <main>
+                    <!-- Side navigation -->
+                    <div class="sidenav">
+                              <a href="../view/dashboard.html">Dashboard</a>
+                              <a href="../view/transaction.html">Transactions</a>
+                              <a href="#">Add income</a>
+                              <a href="../view/addExpense.html">Add expense</a>
+                              <a href="#">Invoices</a>
+                              <a href="#">My Wallet</a>
+                    </div>
+          </main>   
+          <!-- Form to get data for expenses -->
+          <div class="formContainer">
+                    <form id="myForm" >
+                              <div class="row">
+                                        <div class="col-25">
+                                                  <label for="amount">Amount</label>
+                                        </div>
+                                        <div class="col-75">
+                                                  <input type="number" id="amount" name="amount" placeholder="its amount .." min="0" >
+                                        </div>
+                              </div>
+                              <div class="row">
+                                        <div class="col-25">
+                                                  <label for="date">Date</label>
+                                        </div>
+                                        <div class="col-75">
+                                                  <input type="date" id="date" name="date" placeholder="its date ..">
+                                        </div>
+                               </div>
+                               <div class="row">
+                                        <div class="col-25">
+                                          <label for="repeat">Repeat</label>
+                                        </div>
+                                        <div class="col-75">
+                                          <select id="repeat" name="repeat">
+                                            <option value="never">Never</option>
+                                            <option value="everyWeek">Every week</option>
+                                            <option value="everyMonth">Every month</option>
+                                          </select>
+                                        </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-25">
+                                  <label for="category">Category</label>
+                                </div>
+                                <div class="col-75">
+                                  <select id="category" name="category">
+                                    <option value="groceries">Groceries</option>
+                                    <option value="car">Car</option>
+                                    <option value="house">House</option>
+                                    <option value="entertainement">Entertainement</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-25">
+                                  <label for="comment">Comment</label>
+                                </div>
+                                <div class="col-75">
+                                  <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px" ></textarea>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <input type="submit" value="Submit">
+                              </div>
+                    </form>
+
+          </div>
+          
+          
+</body>
+</html>

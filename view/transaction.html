@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="../src/style.css">
+          <title>Transactions</title>
+          <style>
+                    table {
+                        border-collapse: collapse;
+                        margin-left: 15%;
+                    }
+                    th, td ,tr {
+                      
+                        padding: 8px;
+                        margin-left: 15%;
+                    }
+          </style>
+</head>
+<body>
+<main>
+          <div class="header1"> Dashboard</div>
+
+          <!-- Side navigation -->
+          <div class="sidenav">
+                    <a href="../view/dashboard.html">Dashboard</a>
+                    <a href="../view/transaction.html">Transactions</a>
+                    <a href="#">Add income</a>
+                    <a href="../view/addExpense.html">Add expense</a>
+                    <a href="#">Invoices</a>
+                    <a href="#">My Wallet</a>
+          </div>
+
+          <h1 style="margin-left: 15%;">Transaction</h1>
+          <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Repeat</th>
+                            <th>Category</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+          </table>
+
+          <!-- Modal form for editing -->
+                    <div id="editModal" class="modal">
+                              <div class="modal-content">
+                              <span class="close">&times;</span>
+                              <form id="editForm">
+                              <div class="row">
+                                        <div class="col-25">
+                                        <label for="editAmount">Amount</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <input type="number" id="editAmount" name="editAmount" placeholder="Enter the amount" min="0">
+                                        </div>
+                              </div>
+                              <div class="row">
+                                        <div class="col-25">
+                                        <label for="editDate">Date</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <input type="date" id="editDate" name="editDate" placeholder="Enter the date">
+                                        </div>
+                              </div>
+                              <div class="row">
+                                        <div class="col-25">
+                                        <label for="editRepeat">Repeat</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <select id="editRepeat" name="editRepeat">
+                                                  <option value="never">Never</option>
+                                                  <option value="everyWeek">Every week</option>
+                                                  <option value="everyMonth">Every month</option>
+                                        </select>
+                                        </div>
+                              </div>
+                              <div class="row">
+                                        <div class="col-25">
+                                        <label for="editCategory">Category</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <select id="editCategory" name="editCategory">
+                                                  <option value="groceries">Groceries</option>
+                                                  <option value="car">Car</option>
+                                                  <option value="house">House</option>
+                                                  <option value="entertainment">Entertainment</option>
+                                        </select>
+                                        </div>
+                              </div>
+                              <div class="row">
+                                        <div class="col-25">
+                                        <label for="editComment">Comment</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <textarea id="editComment" name="editComment" placeholder="Write something.." style="height:200px"></textarea>
+                                        </div>
+                              </div>
+                              <div class="row">
+                                        <input type="submit" value="Save">
+                              </div>
+                              </form>
+                              </div>
+                    </div>
+          <!-- <script src="../controllers/wizardScript.js"></script> -->
+          <!-- <script src="../controllers/dashboard.js"></script> -->
+          
+          <script src="../controllers/transaction.js" type="module"></script>
+          <script src="../controllers/addExpense.js"></script>
+          
+          <!-- <script src="../array.js"></script> -->
+
+
+</main>       
+
+
+
+</body>
+</html>
