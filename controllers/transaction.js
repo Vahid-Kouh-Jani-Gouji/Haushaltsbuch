@@ -150,37 +150,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
 // Function to filter the table based on user input
 window.filterTable = function(column, value) {
           var input, filter, table, tbody, rows, cells, i, cellValue;
-          
+        
           input = value.trim().toUpperCase();
           filter = input.toUpperCase();
           table = document.getElementById("data-table");
           tbody = table.getElementsByTagName("tbody")[0];
           rows = tbody.getElementsByTagName("tr");
-      
+        
           // Validate column index
           var columnIndex = Array.from(table.rows[0].cells).findIndex(function(cell) {
-              return cell.textContent.trim().toLowerCase() === column.toLowerCase();
+            var cellContent = cell.querySelector('select') ? cell.querySelector('select').value.trim().toLowerCase() : cell.textContent.trim().toLowerCase();
+            return cellContent === String(column).toLowerCase(); // Ensure column is treated as a string
           });
-      
+        
           if (columnIndex === -1) {
-              console.error("Invalid column name: ", column);
-              return;
+            console.error("Invalid column name: ", column);
+            return;
           }
-      
+        
           for (i = 0; i < rows.length; i++) {
-              cells = rows[i].getElementsByTagName("td");
-              cellValue = cells[columnIndex]?.textContent || cells[columnIndex]?.innerText;
-      
-              if (cellValue && cellValue.toUpperCase().indexOf(filter) > -1) {
-                  rows[i].style.display = "";
-              } else {
-                  rows[i].style.display = "none";
-              }
+            cells = rows[i].getElementsByTagName("td");
+            cellValue = cells[columnIndex]?.textContent || cells[columnIndex]?.innerText;
+        
+            // Perform regular text filtering
+            if (cellValue && cellValue.toUpperCase().indexOf(filter) > -1) {
+              rows[i].style.display = "";
+            } else {
+              rows[i].style.display = "none";
+            }
           }
-      };
+        };
+        
+
+
+        
       
       
       
