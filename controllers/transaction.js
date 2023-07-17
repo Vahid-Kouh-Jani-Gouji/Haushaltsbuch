@@ -1,10 +1,10 @@
-
+// Retrieve existing transactions from localStorage or initialize an empty array
+var transactions = JSON.parse(localStorage.getItem("transactions")) ;
 
 document.addEventListener("DOMContentLoaded", function() {
           
           
-          // Retrieve existing transactions from localStorage or initialize an empty array
-          var transactions = JSON.parse(localStorage.getItem("transactions")) ;
+          
 
           var tableBody = document.querySelector("#data-table tbody");
 
@@ -74,6 +74,10 @@ document.addEventListener("DOMContentLoaded", function() {
           
       
  });
+
+
+
+
 // Function to edit a transaction
  function openEditModal(index) {
           var modal = document.getElementById("editModal");
@@ -143,4 +147,40 @@ document.addEventListener("DOMContentLoaded", function() {
           // Display the updated transactions in the table
           location.reload();
 }
+
+
+
+// Function to filter the table based on user input
+window.filterTable = function(column, value) {
+          var input, filter, table, tbody, rows, cells, i, cellValue;
+          
+          input = value.trim().toUpperCase();
+          filter = input.toUpperCase();
+          table = document.getElementById("data-table");
+          tbody = table.getElementsByTagName("tbody")[0];
+          rows = tbody.getElementsByTagName("tr");
+      
+          // Validate column index
+          var columnIndex = Array.from(table.rows[0].cells).findIndex(function(cell) {
+              return cell.textContent.trim().toLowerCase() === column.toLowerCase();
+          });
+      
+          if (columnIndex === -1) {
+              console.error("Invalid column name: ", column);
+              return;
+          }
+      
+          for (i = 0; i < rows.length; i++) {
+              cells = rows[i].getElementsByTagName("td");
+              cellValue = cells[columnIndex]?.textContent || cells[columnIndex]?.innerText;
+      
+              if (cellValue && cellValue.toUpperCase().indexOf(filter) > -1) {
+                  rows[i].style.display = "";
+              } else {
+                  rows[i].style.display = "none";
+              }
+          }
+      };
+      
+      
       
