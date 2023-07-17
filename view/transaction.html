@@ -32,13 +32,29 @@
           </div>
 
           <h1 style="margin-left: 15%;">Transaction</h1>
+
+         
           <table id="data-table">
                     <thead>
+                              
                         <tr>
-                            <th>Amount</th>
-                            <th>Date</th>
-                            <th>Repeat</th>
-                            <th>Category</th>
+                            <th>Amount <input type="number" id="amountFilter" placeholder="Filter by Amount" oninput="filterTable('amount', this.value)"></th>
+                            <th>Date <input type="date" id="dateFilter" placeholder="Filter by Date" oninput="filterTable('date', this.value)"></th>
+                            <th>Repeat 
+                              <select id="repeatFilter" oninput="filterTable('repeat', this.value)">
+                              <option value="never">Never</option>
+                              <option value="everyWeek">Every week</option>
+                              <option value="everyMonth">Every month</option>
+                              </select>
+                            </th>
+                            <th>Category 
+                              <select id="categoryFilter" oninput="filterTable('category', this.value)">
+                              <option value="groceries">Groceries</option>
+                              <option value="car">Car</option>
+                              <option value="house">House</option>
+                              <option value="entertainement">Entertainement</option>
+                              </select>
+                            </th>
                             <th>Comment</th>
                         </tr>
                     </thead>
