@@ -6,7 +6,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
       
           // Get form values
           var amount = document.getElementById("amount").value;
-          amount= -(amount);
+         
           var date = document.getElementById("date").value;
           var repeat = document.getElementById("repeat").value;
           var category = document.getElementById("category").value;
@@ -32,7 +32,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
           document.getElementById("amount").value = "";
           document.getElementById("date").value = "";
           document.getElementById("repeat").value = "never";
-          document.getElementById("category").value = "groceries";
+          document.getElementById("category").value = "salary";
           document.getElementById("comment").value = "";
       
           console.log("Data saved to localStorage.");

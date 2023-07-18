@@ -6,16 +6,16 @@
           <link rel="stylesheet" href="../src/style.css">
           
           <title>Add expense</title>
-          <script src="../controllers/addExpense.js"  async defer></script>
+          <script src="../controllers/addIncome.js"  async defer></script>
 </head>
 <body>
-          <div class="header1"> Add expense</div>
+          <div class="header1"> Add Income</div>
          
           <div id="screen"></div>
           <main>
                     
                     <!-- Title -->
-                    <h1 style="margin-left: 15%;">Add Transactions</h1>
+                    <h1 style="margin-left: 15%;">Add  Income Transactions</h1>
 
                     <!-- Side navigation -->
                     <div class="sidenav">
@@ -32,7 +32,7 @@
 
 
                     <!-- Form to get data for expenses -->
-                    <div class="expenseFormContainer">
+                    <div class="incomeFormContainer">
                               <form id="myForm" >
                                         <div class="row">
                                                   <div class="col-25">
@@ -68,10 +68,10 @@
                                         </div>
                                         <div class="col-75">
                                         <select id="category" name="category">
-                                        <option value="groceries">Groceries</option>
-                                        <option value="car">Car</option>
-                                        <option value="house">House</option>
-                                        <option value="entertainement">Entertainement</option>
+                                        <option value="salary">Salary</option>
+                                        <option value="side job">Side job</option>
+                                        <option value="child benefit">Child benefit</option>
+                                        <option value="dividends">Dividends</option>
                                         </select>
                                         </div>
                                         </div>
@@ -80,7 +80,7 @@
                                         <label for="comment">Comment</label>
                                         </div>
                                         <div class="col-75">
-                                        <textarea id="comment" name="comment"  placeholder="Write something.." style="height:200px" >It is Expense</textarea>
+                                        <textarea id="comment" name="comment"  placeholder="Write something.." style="height:200px" >It is Income</textarea>
                                         </div>
                                         </div>
                                         <div class="row">

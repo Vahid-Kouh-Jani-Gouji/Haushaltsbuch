@@ -23,12 +23,23 @@ document.addEventListener("DOMContentLoaded", function() {
                     row.appendChild(cell);
                     });
                     
-                    var amountValue = parseFloat(transaction.amount); // Parse amount as a number
                     
+                   
+    
+                    
+                    var amountValue = parseFloat(transaction.amount); // Parse amount as a number
+                    // Check if value is positive or negative and apply corresponding class
+                    
+                    if (amountValue > 0) {
+                              row.classList.add('positive-row');
+                              } else if (amountValue < 0) {
+                              row.classList.add('negative-row');
+                              }
 
                     // Update the sum
                     sum += amountValue;
-                    localStorage.setItem("expenseSum", JSON.stringify(sum));
+                    
+                    localStorage.setItem("transactionSum", JSON.stringify(sum));
           
                     // Create actions cell
                     var actionsCell = document.createElement("td");

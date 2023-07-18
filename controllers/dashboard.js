@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
           // Retrieve existing transactions from localStorage or initialize an empty array
           var wizardData = JSON.parse(localStorage.getItem("wizardData")) ;
           
-          var expenseSum = JSON.parse(localStorage.getItem("expenseSum")) ;
-          var expenseValue = parseFloat(expenseSum);
+          var transactionSum = JSON.parse(localStorage.getItem("transactionSum")) ;
+          var transactionValue = parseFloat(transactionSum);
          
           var sum = 0 ;
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("saldo", JSON.stringify(sum));
         tableBody.appendChild(row);
     });
-    sum -= expenseValue ;
+    sum += transactionValue ;
     // Create a new row for the sum
     var sumRow = document.createElement("tr");
 
@@ -50,16 +50,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create a cell for the sum value
     var sumCell = document.createElement("td");
-    sumCell.textContent = sum;
+    if (!isNaN(sum)) {
+        var parsedSum = parseFloat(sum);
+        sumCell.textContent = parsedSum;
+      } else {
+        sumCell.textContent = "Invalid sum";
+      }
+      
+    
     sumRow.appendChild(sumCell);
 
     // Append the sum row to the table body
     tableBody.appendChild(sumRow);
 
-    if(sum <= 200) {
-        var warningInfo="Your Balance is below than 200 EUR";
-        alert(warningInfo);
-        }  
+    // if(sum <= 200) {
+    //     var warningInfo="Your Balance is below than 200 EUR";
+    //     alert(warningInfo);
+    //     }  
 });
 
 

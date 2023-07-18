@@ -39,17 +39,29 @@
 .sidenav a:hover {
           color: #f1f1f1;
         }
-/*  begin Styling for Form in expense */  
-.formContainer{
+/*  begin Styling for Form in income */  
+.incomeFormContainer{
           display: flexbox;
           background-color: rgb(9, 238, 74);
           margin-left: 15%;
 }
 /* Style the container */
-.formContainer {
+.incomeFormContainer {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #30de59a2;
   padding: 20px;
+}
+/*  begin Styling for Form in expense */  
+.expenseFormContainer{
+  display: flexbox;
+  background-color: rgb(9, 238, 74);
+  margin-left: 15%;
+}
+/* Style the container */
+.expenseFormContainer {
+border-radius: 5px;
+background-color: #e93d0da2;
+padding: 20px;
 }
 
 .badge {
@@ -111,6 +123,13 @@ th, td {
   border: 1px solid black;
   padding: 8px;
   margin-left: 15%;
+}
+.positive-row {
+  background-color: rgba(84, 199, 31, 0.495);
+}
+
+.negative-row {
+  background-color: rgba(236, 90, 90, 0.604);
 }
 
 
