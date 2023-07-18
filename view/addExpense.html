@@ -13,74 +13,85 @@
          
           <div id="screen"></div>
           <main>
+                    
+                    <!-- Title -->
+                    <h1 style="margin-left: 15%;">Add Transactions</h1>
+
                     <!-- Side navigation -->
                     <div class="sidenav">
                               <a href="../view/dashboard.html">Dashboard</a>
                               <a href="../view/transaction.html">Transactions</a>
                               <a href="#">Add income</a>
-                              <a href="../view/addExpense.html">Add expense</a>
+                              <a href="/view/addExpense.html">Add expense</a>
                               <a href="#">Invoices</a>
                               <a href="#">My Wallet</a>
+                              <a href="../view/notification.html">Notification 
+                                        <span class="badge" >3</span>
+                              </a>
                     </div>
-          </main>   
-          <!-- Form to get data for expenses -->
-          <div class="formContainer">
-                    <form id="myForm" >
-                              <div class="row">
-                                        <div class="col-25">
-                                                  <label for="amount">Amount</label>
-                                        </div>
-                                        <div class="col-75">
-                                                  <input type="number" id="amount" name="amount" placeholder="its amount .." min="0" value="0" >
-                                        </div>
-                              </div>
-                              <div class="row">
-                                        <div class="col-25">
-                                                  <label for="date">Date</label>
-                                        </div>
-                                        <div class="col-75">
-                                                  <input type="date" id="date" name="date" placeholder="its date ..">
-                                        </div>
-                               </div>
-                               <div class="row">
-                                        <div class="col-25">
-                                          <label for="repeat">Repeat</label>
-                                        </div>
-                                        <div class="col-75">
-                                          <select id="repeat" name="repeat">
-                                            <option value="never">Never</option>
-                                            <option value="everyWeek">Every week</option>
-                                            <option value="everyMonth">Every month</option>
-                                          </select>
-                                        </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="category">Category</label>
-                                </div>
-                                <div class="col-75">
-                                  <select id="category" name="category">
-                                    <option value="groceries">Groceries</option>
-                                    <option value="car">Car</option>
-                                    <option value="house">House</option>
-                                    <option value="entertainement">Entertainement</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="comment">Comment</label>
-                                </div>
-                                <div class="col-75">
-                                  <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px" ></textarea>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <input type="submit" value="Submit">
-                              </div>
-                    </form>
 
-          </div>
+
+                    <!-- Form to get data for expenses -->
+                    <div class="formContainer">
+                              <form id="myForm" >
+                                        <div class="row">
+                                                  <div class="col-25">
+                                                            <label for="amount">Amount</label>
+                                                  </div>
+                                                  <div class="col-75">
+                                                            <input type="number" id="amount" name="amount" placeholder="its amount .." min="0" value="0" >
+                                                  </div>
+                                        </div>
+                                        <div class="row">
+                                                  <div class="col-25">
+                                                            <label for="date">Date</label>
+                                                  </div>
+                                                  <div class="col-75">
+                                                            <input type="date" id="date" name="date" placeholder="its date ..">
+                                                  </div>
+                                        </div>
+                                        <div class="row">
+                                                  <div class="col-25">
+                                                  <label for="repeat">Repeat</label>
+                                                  </div>
+                                                  <div class="col-75">
+                                                  <select id="repeat" name="repeat">
+                                                  <option value="never">Never</option>
+                                                  <option value="everyWeek">Every week</option>
+                                                  <option value="everyMonth">Every month</option>
+                                                  </select>
+                                                  </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-25">
+                                        <label for="category">Category</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <select id="category" name="category">
+                                        <option value="groceries">Groceries</option>
+                                        <option value="car">Car</option>
+                                        <option value="house">House</option>
+                                        <option value="entertainement">Entertainement</option>
+                                        </select>
+                                        </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-25">
+                                        <label for="comment">Comment</label>
+                                        </div>
+                                        <div class="col-75">
+                                        <textarea id="comment" name="comment" placeholder="Write something.." style="height:200px" ></textarea>
+                                        </div>
+                                        </div>
+                                        <div class="row">
+                                        <input type="submit" value="Submit">
+                                        </div>
+                              </form>
+
+                    </div>
+
+          </main>   
+          
           
           
 </body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="../src/style.css">
+          <script src="../controllers/notification.js" async defer></script>
+          <script src="../controllers/dashboard.js" async defer></script>
+          <title>Notification</title>
+
+</head>
+<body>
+          <!-- header -->
+          <div class="header1"> Notification</div><br>
+      <main>
+          <!-- Title -->
+          <h1 style="margin-left: 15%;">Notification</h1>
+          
+          <!-- Side navigation -->
+          <div class="sidenav">
+                    <a href="../view/dashboard.html">Dashboard</a>
+                    <a href="../view/transaction.html">Transactions</a>
+                    <a href="#">Add income</a>
+                    <a href="/view/addExpense.html">Add expense</a>
+                    <a href="#">Invoices</a>
+                    <a href="#">My Wallet</a>
+                    <a href="../view/notification.html">Notification 
+                              <span class="badge" >3</span>
+                    </a>
+          </div>
+
+          <div class="notification">
+                    <h2>Notes</h2>
+                    <div class="alert"id="dangerText">
+                    <span class="closebtn">&times;</span>  
+                    <strong>Danger!</strong> Indicates a successful or positive action.
+                    </div>
+                    
+                    <div class="alert success">
+                    <span class="closebtn">&times;</span>  
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                    </div>
+                    
+                    <div class="alert info">
+                    <span class="closebtn">&times;</span>  
+                    <strong>Info!</strong> Indicates a neutral informative change or action.
+                    </div>
+                    
+                    <div class="alert warning">
+                    <span class="closebtn">&times;</span>  
+                    <strong>Warning!</strong> Indicates a warning that might need attention.
+                    </div>
+          </div>
+
+      </main>   
+       
+     
+</body>
+</html>

@@ -52,6 +52,48 @@
   padding: 20px;
 }
 
+.badge {
+  position: relative;
+  top: -30px;
+  right: -120px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: large;
+}
+/* Style for notification.html*/
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+  }
+  .notification{
+            margin-left: 15%;
+  }
+  
+  .alert.success {background-color: #04AA6D;}
+  .alert.info {background-color: #2196F3;}
+  .alert.warning {background-color: #ff9800;}
+  
+  .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+  color: black;
+  }
+
 /* Style inputs, select elements and textareas */
 input[type=text],input[type=number],input[type=date], select, textarea{
   width: 100%;
@@ -61,6 +103,16 @@ input[type=text],input[type=number],input[type=date], select, textarea{
   box-sizing: border-box;
   resize: vertical;
 }
+table {
+  border-collapse: collapse;
+  margin-left: 15%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  margin-left: 15%;
+}
+
 
 /* Style the label to display next to the inputs */
 label {

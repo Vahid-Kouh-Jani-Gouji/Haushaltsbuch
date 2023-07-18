@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Update the sum
         sum += amountValue;
-
+       
+        localStorage.setItem("saldo", JSON.stringify(sum));
         tableBody.appendChild(row);
     });
     sum -= expenseValue ;
@@ -55,9 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Append the sum row to the table body
     tableBody.appendChild(sumRow);
 
-
-
-    
+    if(sum <= 200) {
+        var warningInfo="Your Balance is below than 200 EUR";
+        alert(warningInfo);
+        }  
 });
 
 
