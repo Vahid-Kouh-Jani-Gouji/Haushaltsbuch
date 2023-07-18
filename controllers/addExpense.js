@@ -21,11 +21,7 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
               comment: comment
           };
       
-          // // Convert data object to JSON
-          // var jsonData = JSON.stringify(data);
-      
-          // // Save JSON data to localStorage
-          // localStorage.setItem("transactionData", jsonData);
+         
           
           // Add new transaction to the array
           transactions.push(data);

@@ -43,14 +43,70 @@
               <tbody></tbody>
           </table>
 
-          <div style="margin-left: 15%;">
-                    <button onclick="filterTable(2, 'today')">Today</button>
-                    <button onclick="filterTable(2, 'lastWeek')">Last Week</button>
-                    <button onclick="filterTable(2, 'lastMonth')">Last Month</button>
-                    <button onclick="filterTable(2, 'lastYear')">Last Year</button>
+          <div style="margin-left: 15%; display:block; ">
+                    <div>Today
+                              <table id="data-table-today" >
+                                        <thead>
+                                                  
+                                            <tr>
+                                                <th >Amount </th>
+                                                <th >Date  </th>                                    
+                                                <th >Repeat  </th>
+                                                <th >Category </th>
+                                                <th>Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                              </table>
+                    </div>
+                    <div>Last Week
+                              <table id="data-table-lastWeek" >
+                                        <thead>
+                                                  
+                                            <tr>
+                                                <th >Amount </th>
+                                                <th >Date  </th>                                    
+                                                <th >Repeat  </th>
+                                                <th >Category </th>
+                                                <th>Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                              </table>
+                    </div>
+                    <div>Last Month 
+                              <table id="data-table-lastMonth" >
+                                        <thead>
+                                                  
+                                            <tr>
+                                                <th >Amount </th>
+                                                <th >Date  </th>                                    
+                                                <th >Repeat  </th>
+                                                <th >Category </th>
+                                                <th>Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                              </table>
+                    </div>
+                    <div>Last Year 
+                              <table id="data-table-lastYear" >
+                                        <thead>
+                                                  
+                                            <tr>
+                                                <th >Amount </th>
+                                                <th >Date  </th>                                    
+                                                <th >Repeat  </th>
+                                                <th >Category </th>
+                                                <th>Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                              </table>
+                    </div>
                     
           </div>
-
+          <script src="../controllers/periods.js"></script>
           <script src="../controllers/wizardScript.js"></script>
           <script src="../controllers/dashboard.js"></script>
 
