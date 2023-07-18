@@ -1,13 +1,12 @@
    
     var transactions = JSON.parse(localStorage.getItem("transactions")) ;
+    var currentDate = new Date();
+    var oneMonthAgo = new Date();
+      oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+      
+     
 
-    var startOfDay = new Date();
-          startOfDay.setHours(0, 0, 0, 0);
-          var endOfDay = new Date();
-          endOfDay.setHours(23, 59, 59, 999);
-          // return transactionDate >= startOfDay && transactionDate <= endOfDay;
-
-          var tableBody = document.querySelector("#data-table-today tbody");
+          var tableBody = document.querySelector("#data-table-lastMonth tbody");
 
           // Clear table body
           tableBody.innerHTML = "";
@@ -18,7 +17,7 @@
           transactions.forEach(function(transaction, index) {
                     var row = document.createElement("tr");
                     var dateObject = new Date(transaction.date);
-                    if (dateObject >= startOfDay && dateObject <= endOfDay){
+                    if (dateObject >= oneMonthAgo && dateObject <= currentDate){
                               Object.values(transaction).forEach(function(value) {
                               var cell = document.createElement("td");
                               cell.textContent = value;
