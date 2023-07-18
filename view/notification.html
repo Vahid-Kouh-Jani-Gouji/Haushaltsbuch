@@ -4,8 +4,7 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="../src/style.css">
-          <script src="../controllers/notification.js" async defer></script>
-          <script src="../controllers/dashboard.js" async defer></script>
+         
           <title>Notification</title>
 
 </head>
@@ -25,15 +24,15 @@
                     <a href="#">Invoices</a>
                     <a href="#">My Wallet</a>
                     <a href="../view/notification.html">Notification 
-                              <span class="badge" >3</span>
+                              <span  id="numberOfNotification" class="badge" ></span>
                     </a>
           </div>
 
           <div class="notification">
                     <h2>Notes</h2>
-                    <div class="alert"id="dangerText">
+                    <div class="alert">
                     <span class="closebtn">&times;</span>  
-                    <strong>Danger!</strong> Indicates a successful or positive action.
+                    <strong>Danger!</strong> <span id="dangerText"></span>
                     </div>
                     
                     <div class="alert success">
@@ -53,7 +52,8 @@
           </div>
 
       </main>   
-       
+      <script src="../controllers/notification.js"></script>
      
+     <script src="../controllers/dashboard.js"></script>
 </body>
 </html>
