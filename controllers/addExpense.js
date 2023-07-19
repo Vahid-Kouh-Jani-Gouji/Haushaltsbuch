@@ -37,4 +37,9 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
       
           console.log("Data saved to localStorage.");
  });
+ // check for saldo and add alarm lable to notification menu 
+// Retrieve existing saldo from localStorage 
+var saldo = JSON.parse(localStorage.getItem("saldo")) ;
+var saldoValue = parseInt(saldo);
+if ( saldoValue <= 200)document.getElementById("numberOfNotification").innerHTML="1";
       

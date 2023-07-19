@@ -81,7 +81,12 @@ document.addEventListener("DOMContentLoaded", function() {
           // Append the sum row to the table body
           tableBody.appendChild(sumRow);
 
-      
+// check for saldo and add alarm lable to notification menu 
+// Retrieve existing saldo from localStorage 
+var saldo = JSON.parse(localStorage.getItem("saldo")) ;
+var saldoValue = parseInt(saldo);
+if ( saldoValue <= 200)document.getElementById("numberOfNotification").innerHTML="1";
+ 
           
       
  });
@@ -195,6 +200,8 @@ window.filterTable = function(column, value) {
             }
           }
         };
+
+
         
 
 
