@@ -15,10 +15,12 @@
 
           transactions.forEach(function(transaction, index) {
                     var row = document.createElement("tr");
+                    // get sum value of the all transaction for last Week
                     var lastWeekSumValue = parseFloat(transaction.amount) ;
                     
                      sum += lastWeekSumValue; 
                     localStorage.setItem("lastWeekSumValue", JSON.stringify(sum));
+                    // determine date for last Week 
                     var dateObject = new Date(transaction.date);
                     if (dateObject >= oneWeekAgo && dateObject <= currentDate){
                               Object.values(transaction).forEach(function(value) {
