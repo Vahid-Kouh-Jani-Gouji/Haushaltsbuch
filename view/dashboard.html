@@ -5,6 +5,12 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="../src/style.css">
           <title>Dashboard</title>
+          <style>
+                    .current-value {
+                              background-color: yellow;
+                            }
+                            
+          </style>
 </head>
 <body>
 
@@ -100,13 +106,31 @@
                               </table>
                     </div>
                     
+          </div><br>
+<!-- table for forecast -->
+          <div>
+                    <h1 style="margin-left: 15%;">Forecast </h1>
+                    <table id="nextWeekForecastTable">
+                              <thead>
+                                <tr>
+                                  <th>Date</th>
+                                  <th>Amount</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <!-- Rows will be dynamically added using JavaScript -->
+                              </tbody>
+                            </table>
+                            
           </div>
+          
           <script src="../controllers/periodsLastYear.js"></script>
           <script src="../controllers/periodsLastMonth.js"></script>
           <script src="../controllers/periodsLastWeek.js"></script>
           <script src="../controllers/periodsToday.js"></script>
           <script src="../controllers/wizardScript.js"></script>
           <script src="../controllers/dashboard.js"></script>
+          <script src="../controllers/forecast.js"></script>
 
 
 </main>       
