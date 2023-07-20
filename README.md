@@ -5,11 +5,15 @@
 
 Check out the live demo of my app: [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/homepage.html)
 
+# To use this App follwe this steps : 
+  - click on the  [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/homepage.html)
+  - in Home page click on Register 
+  
+  or if you don't would like to register
+  - click on this link [Directly Link](https://main.d20ldbddf5hcx2.amplifyapp.com/view/wizard.html)
+
 
 ![Money stats Entity](./src/image/HaushaltsbuchEntity.png)
-
-
-
 
 
 # Data Structure :
