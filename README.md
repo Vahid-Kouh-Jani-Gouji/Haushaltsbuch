@@ -1,7 +1,14 @@
-# This app can be used as a Money stats :) ,
+# This app can be used as a Money stats :) 
  I didnt use Bootstrap or any external bibliotek 
 
+## Demo
+
+Check out the live demo of my app: [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/)
+
+
 ![Money stats Entity](./src/image/HaushaltsbuchEntity.png)
+
+
 
 
 

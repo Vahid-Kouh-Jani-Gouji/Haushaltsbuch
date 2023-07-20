@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+      <style>
+            body {
+                  background-image: url("./src/image/header.jpg"); /* Path to your image */
+                  background-size: cover; /* Adjust the image size to cover the entire body */
+                  background-position: center; /* Center the image */
+                }
+                
+            #header {
+                  background-color: #6e6969a5; /* Grey background */
+                  
+                  padding: 50px 10px; /* Some padding */
+                  color: #ffffff;
+                  text-align: center; /* Centered text */
+                  font-size: 90px; /* Big font size */
+                  font-weight: bold;
+                  position: fixed; /* Fixed position - sit on top of the page */
+                  top: 0;
+                  width: 100%; /* Full width */
+                  transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+                }
+                </style>
+</head>
+<body>
+      <div id="header">Money stat</div>
+      <div style=" margin-top:130% ">
+            <a href="https://sample24.auth.us-east-1.amazoncognito.com/oauth2/authorize?response_type=token&client_id=30mnk3d72grk2lpjs2kpas2ler&redirect_uri=http://localhost:5500/login.html" >register</a>  
+            <a href="https://sample24.auth.us-east-1.amazoncognito.com/logout?client_id=30mnk3d72grk2lpjs2kpas2ler&logout_uri=http://localhost:5500/logout.html">log out</a>
+      </div>
+      
+<script>
+      // When the user scrolls down 50px from the top of the document, resize the header's font size
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          document.getElementById("header").style.fontSize = "30px";
+        } else {
+          document.getElementById("header").style.fontSize = "90px";
+        }
+      }
+      </script>
+
+</body>
+</html>

@@ -3,9 +3,114 @@
 
 .header1 {
           display: flexbox;
-          background-color: aqua;
-          margin-left: 15%;
+          background-color: rgba(175, 168, 237, 0.545);
+          margin-left: 75%;
+          box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+          border-radius: 10px;
+          padding-inline: 5px;
+         
+         
 }
+/* Start Dashboard page */
+
+.current-value {
+  background-color: yellow;
+}
+.balanceCard{
+  margin-left: 15% ;
+  margin-bottom: 5%;
+  display: grid;
+  justify-items:stretch;
+  padding: 5px;
+  border-radius: 10px;
+  
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+
+}
+.balanceTable{
+  border-collapse: collapse;
+
+}
+.balanceCard > div  {
+ 
+  margin: 5px;
+  border-radius: 10px;
+
+  padding-inline: 5px;
+ 
+ 
+}  
+.balanceCard > div >h1 {
+  background-color: #3a97ee69;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  padding-inline: 5px;
+ 
+ 
+}  
+
+
+
+.transactionCards {
+  margin-left: 15%; 
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1px 1px;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  justify-items: center;
+  border-radius: 10px;
+  width: fit-content;
+  
+  
+   
+}
+
+
+.transactionCards > div  {
+  background-color: #fdfdfd72;
+ width: auto;
+  margin: 5px;
+  text-align: center;
+  
+}
+.transactionCards > div>table{
+  border-collapse: collapse;
+  
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding-inline: 5px;
+  
+ 
+  position: relative;
+}
+.todayTable:hover,.lastWeekTable:hover,.lastYearTable:hover,.lastMonthTable:hover ,.forecastTable:hover{
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);        
+}
+
+.transactionCards > div>h1{
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);  
+  background-color: rgba(175, 168, 237, 0.545);
+  border-radius: 10px;
+  
+  
+}
+
+.lastYearTable{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  cursor: pointer;
+}
+.forecastTable{
+  cursor: pointer;
+}
+
+#nextWeekForecastTable , #data-table-lastYear{
+  display: none;
+
+}
+
+/* End Dashboard */
 
 /* Style page content */
 .main {
@@ -15,15 +120,22 @@
 
 /* The sidebar menu */
 .sidenav {
-          height: 100%; /* Full-height: remove this if you want "auto" height */
+          height: auto; /* Full-height: remove this if you want "auto" height */
           width: 160px; /* Set the width of the sidebar */
           position: fixed; /* Fixed Sidebar (stay in place on scroll) */
           z-index: 1; /* Stay on top */
-          top: 0; /* Stay at the top */
+          top: 10%; /* Stay at the top */
           left: 0;
-          background-color: #111; /* Black */
+          background-color: #a759c4; /* Black */
           overflow-x: hidden; /* Disable horizontal scroll */
-          padding-top: 20px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+          border-radius: 10px;
+          padding-inline: 5px;
+          margin-top: 10%;
+          margin-left:5px ;
+          
         }        
 
 /* The navigation menu links */
@@ -31,7 +143,7 @@
           padding: 6px 8px 6px 16px;
           text-decoration: none;
           font-size: 25px;
-          color: #818181;
+          color: #fffdfd7e;
           display: block;
         }
 
@@ -44,6 +156,9 @@
           display: flexbox;
           background-color: rgb(9, 238, 74);
           margin-left: 15%;
+          box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+          border-radius: 10px;
+          padding-inline: 5px;
 }
 /* Style the container */
 .incomeFormContainer {
@@ -56,6 +171,9 @@
   display: flexbox;
   background-color: rgb(9, 238, 74);
   margin-left: 15%;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding-inline: 5px;
 }
 /* Style the container */
 .expenseFormContainer {
@@ -85,8 +203,18 @@ padding: 20px;
   }
   .notification{
             margin-left: 15%;
+            border-radius: 5px;
+            box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+            padding-inline: 10px;
+            padding-bottom: 10px;
   }
-  
+  .notification>div{
+    
+    border-radius: 5px;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+    padding-inline: 10px;
+    padding-bottom: 10px;
+}
   .alert.success {background-color: #04AA6D;}
   .alert.info {background-color: #2196F3;}
   .alert.warning {background-color: #ff9800;}
@@ -115,21 +243,28 @@ input[type=text],input[type=number],input[type=date], select, textarea{
   box-sizing: border-box;
   resize: vertical;
 }
-table {
-  border-collapse: collapse;
+.transactionsTable  {
+  
   margin-left: 15%;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding-inline: 5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+ 
+  
 }
-th, td {
+th,td {
   border: 1px solid black;
   padding: 8px;
   margin-left: 15%;
-}
+} 
 .positive-row {
   background-color: rgba(84, 199, 31, 0.495);
 }
 
 .negative-row {
-  background-color: rgba(236, 90, 90, 0.604);
+  background-color: rgba(232, 67, 207, 0.59);
 }
 
 

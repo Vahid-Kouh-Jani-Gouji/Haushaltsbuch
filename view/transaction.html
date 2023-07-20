@@ -13,11 +13,12 @@
 <main>
           
           <!-- Title -->
-          <h1 style="margin-left: 15%;">Transaction</h1>
+          <h1 style="margin-left: 15%; background-color: #3a97ee69;
+                    border-radius: 10px; box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2); padding-inline: 5px;" >Transactions</h1>
 
           <!-- Side navigation -->
           <div class="sidenav">
-                    <a href="../view/dashboard.html">Dashboard</a>
+                    <a href="../view/dashboard.html"  >Dashboard</a>
                     <a href="../view/transaction.html">Transactions</a>
                     <a href="../view/addIncome.html">Add income</a>
                     <a href="../view/addExpense.html">Add expense</a>
@@ -31,45 +32,47 @@
          
 
          
-          <table id="data-table">
-                    <thead>
-                              
-                        <tr>
-                            <th >Amount <input type="number" id="amountFilter" placeholder="Filter by Amount" oninput="filterTable('amount', this.value)"></th>
-                            <th >Date 
-                              <input type="date" id="dateFilter" placeholder="Filter by Date" oninput="filterTable('date', this.value)">
-                              <!-- <select id="dateFilter" oninput="filterTable(this.value, this.value)">
-                                        <option value="">All Dates</option>
-                                        <option value="lastWeek">Last Week</option>
-                                        <option value="lastMonth">Last Month</option>
-                                        <option value="lastYear">Last Year</option>
-                              </select> -->
-                            </th>
-                            <th >Repeat 
-                              <!-- <input type="text" id="repeatFilter" placeholder="Filter by Repeat" oninput="filterTable('repeat', this.value)"> -->
-                              <select id="repeatFilter"  name="repeat" oninput="filterTable( this.value , this.value)">
-                                        <option value="">All Periods</option>
-                                        <option value="never">Never</option>
-                                        <option value="everyWeek">Every week</option>
-                                        <option value="everyMonth">Every month</option>
-                              </select>
-                            </th>
-                            <th >Category 
-                              <!-- <input type="text" id="categoryFilter" placeholder="Filter by Category" oninput="filterTable('category', this.value)"> -->
-                              <select  id="categoryFilter" type="text" oninput="filterTable(this.value, this.value)">
-                                        <option value="">All Categories</option>
-                                        <option value="groceries">Groceries</option>
-                                        <option value="car">Car</option>
-                                        <option value="house">House</option>
-                                        <option value="entertainment">Entertainment</option>
-                              </select>
-                                      
-                            </th>
-                            <th>Comment</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-          </table>
+          <div class="transactionsTable">
+                    <table style="border-collapse: collapse;" id="data-table">
+                              <thead>
+                                        
+                                  <tr>
+                                      <th >Amount <input type="number" id="amountFilter" placeholder="Filter by Amount" oninput="filterTable('amount', this.value)"></th>
+                                      <th >Date 
+                                        <input type="date" id="dateFilter" placeholder="Filter by Date" oninput="filterTable('date', this.value)">
+                                        <!-- <select id="dateFilter" oninput="filterTable(this.value, this.value)">
+                                                  <option value="">All Dates</option>
+                                                  <option value="lastWeek">Last Week</option>
+                                                  <option value="lastMonth">Last Month</option>
+                                                  <option value="lastYear">Last Year</option>
+                                        </select> -->
+                                      </th>
+                                      <th >Repeat 
+                                        <!-- <input type="text" id="repeatFilter" placeholder="Filter by Repeat" oninput="filterTable('repeat', this.value)"> -->
+                                        <select id="repeatFilter"  name="repeat" oninput="filterTable( this.value , this.value)">
+                                                  <option value="">All Periods</option>
+                                                  <option value="never">Never</option>
+                                                  <option value="everyWeek">Every week</option>
+                                                  <option value="everyMonth">Every month</option>
+                                        </select>
+                                      </th>
+                                      <th >Category 
+                                        <!-- <input type="text" id="categoryFilter" placeholder="Filter by Category" oninput="filterTable('category', this.value)"> -->
+                                        <select  id="categoryFilter" type="text" oninput="filterTable(this.value, this.value)">
+                                                  <option value="">All Categories</option>
+                                                  <option value="groceries">Groceries</option>
+                                                  <option value="car">Car</option>
+                                                  <option value="house">House</option>
+                                                  <option value="entertainment">Entertainment</option>
+                                        </select>
+                                                
+                                      </th>
+                                      <th>Comment</th>
+                                  </tr>
+                              </thead>
+                              <tbody></tbody>
+                    </table>
+          </div>
 
           <!-- Modal form for editing -->
           <div id="editModal" class="modal">
@@ -135,11 +138,12 @@
         
 
           
-          <script src="../controllers/transaction.js" type="module"></script>
-          <script src="../controllers/addExpense.js"></script>
+          
           
 </main>       
 
+<script src="../controllers/transaction.js" type="module"></script>
+<script src="../controllers/addExpense.js"></script>
 
 
 </body>

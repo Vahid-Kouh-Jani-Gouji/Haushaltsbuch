@@ -6,22 +6,67 @@
           <link rel="stylesheet" href="../src/style.css">
           <title>Dashboard</title>
           <style>
-                    .current-value {
-                              background-color: yellow;
+                    .toggleDashboard {
+                      width: 35px;
+                      height: 5px;
+                      background-color: black;
+                      margin: 6px 0;
+                      margin-top: 0px;
+                      padding-top: 0px;
+                    
+                      
+                    }
+                    .toggleMenuDashboard:hover {
+                              
+                              position: sticky;
+                              cursor: pointer;
+                              
                             }
-                            
+                    .title{
+                              display: flex;
+                              flex-direction: column;
+                              width: fit-content;
+                              
+                              margin-left: 15%;
+                             
+                           
+
+                    }
+                    .title > div>h1{
+
+                     background-color: #c13aee69;
+                    border-radius: 10px;
+                     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2); 
+                     padding: 5px 5px 5px 5px;
+                     
+
+                    }
           </style>
+          
 </head>
 <body>
 
           <!-- Header -->
-          <div class="header1"> Dashboard</div><br>
+          <div class="header1"> Dashboard
+                    <a href="https://sample24.auth.us-east-1.amazoncognito.com/logout?client_id=30mnk3d72grk2lpjs2kpas2ler&logout_uri=http://localhost:5500/logout.html">log out</a>
+          </div><br>
 <main>
-          <!-- Title -->
-          <h1 style="margin-left: 15%;">Dashboard</h1>
+        <div class="title">
+            <!-- Title -->
+            <div>
+                    <h1  >Dashboard</h1>
+          </div>
+          <!-- Dashboard Toggle -->
+          <div  class="toggleMenuDashboard" onclick="visitDashboard()">
+                    <div class="toggleDashboard"></div>
+                    <div class="toggleDashboard"></div>
+                    <div class="toggleDashboard"></div>
+          </div>
+        </div>
           <!-- Side navigation -->
-          <div class="sidenav">
-                    <a href="../view/dashboard.html">Dashboard</a>
+                         
+          <div class="sidenav" id="sidenavbar">
+                    <a href="../view/dashboard.html" >Dashboard</a>
                     <a href="../view/transaction.html">Transactions</a>
                     <a href="../view/addIncome.html">Add income</a>
                     <a href="../view/addExpense.html">Add expense</a>
@@ -31,98 +76,142 @@
                               <span id="numberOfNotification" class="badge" ></span>
                     </a>
           </div>
-
-          <h1 style="margin-left: 15%;">Balance and Categories</h1>
-          <table id="data-table">
-              <thead>
-                  <tr>
-                      <th>Balance</th>
-                      <th>Income Categories</th>
-                      <th>Expenses Categories</th>
-                  </tr>
-              </thead>
-              <tbody></tbody>
-          </table>
-
-          <div style="margin-left: 15%; display:block; ">
-                    <div>Today
-                              <table id="data-table-today" >
+           <!-- Table for Balance -->
+          <div class="balanceCard">
+                    <div>
+                              <h1 >Balance and Categories</h1>
+                    </div>
+                    <div>
+                              <table class="balanceTable" id="data-table">
+                                        <thead>
+                                        <tr>
+                                                  <th>Balance</th>
+                                                  <th>Income Categories</th>
+                                                  <th>Expenses Categories</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                        </table>
+                    </div>
+          </div>
+          <!-- Table for transactions -->
+          <div  class="transactionCards" >
+        
+          <!-- Table for Today transactions -->
+                    <div >
+                              <h1 >Today </h1>
+                              <table class="todayTable"id="data-table-today" >
                                         <thead>
                                                   
-                                            <tr>
-                                                <th >Amount </th>
-                                                <th >Date  </th>                                    
-                                                <th >Repeat  </th>
-                                                <th >Category </th>
-                                                <th>Comment</th>
-                                            </tr>
+                                                  <tr>
+                                                  <th >Amount </th>
+                                                  <th >Date  </th>                                    
+                                                  <th >Repeat  </th>
+                                                  <th >Category </th>
+                                                  <th>Comment</th>
+                                                  </tr>
                                         </thead>
                                         <tbody></tbody>
                               </table>
                     </div>
-                    <div>Last Week
-                              <table id="data-table-lastWeek" >
+          <!-- Table for last Week transactions -->
+                    <div >
+                              <h1  >Last Week </h1>
+                              <table class="lastWeekTable" id="data-table-lastWeek" >
                                         <thead>
                                                   
-                                            <tr>
-                                                <th >Amount </th>
-                                                <th >Date  </th>                                    
-                                                <th >Repeat  </th>
-                                                <th >Category </th>
-                                                <th>Comment</th>
-                                            </tr>
+                                                  <tr>
+                                                  <th >Amount </th>
+                                                  <th >Date  </th>                                    
+                                                  <th >Repeat  </th>
+                                                  <th >Category </th>
+                                                  <th>Comment</th>
+                                                  </tr>
                                         </thead>
                                         <tbody></tbody>
                               </table>
                     </div>
-                    <div>Last Month 
-                              <table id="data-table-lastMonth" >
+          <!-- Table for last Month transactions -->
+                    <div >
+                              <h1 >Last Month </h1>
+                              <table class="lastMonthTable" id="data-table-lastMonth" >
                                         <thead>
                                                   
-                                            <tr>
-                                                <th >Amount </th>
-                                                <th >Date  </th>                                    
-                                                <th >Repeat  </th>
-                                                <th >Category </th>
-                                                <th>Comment</th>
-                                            </tr>
+                                                  <tr>
+                                                  <th >Amount </th>
+                                                  <th >Date  </th>                                    
+                                                  <th >Repeat  </th>
+                                                  <th >Category </th>
+                                                  <th>Comment</th>
+                                                  </tr>
                                         </thead>
                                         <tbody></tbody>
                               </table>
                     </div>
-                    <div>Last Year 
+          <!-- Table for last Year transactions -->
+                    <div class="lastYearTable" onclick="toggleLastyear()">
+                              <h1 >Last Year </h1>
                               <table id="data-table-lastYear" >
                                         <thead>
                                                   
-                                            <tr>
-                                                <th >Amount </th>
-                                                <th >Date  </th>                                    
-                                                <th >Repeat  </th>
-                                                <th >Category </th>
-                                                <th>Comment</th>
-                                            </tr>
+                                                  <tr>
+                                                  <th >Amount </th>
+                                                  <th >Date  </th>                                    
+                                                  <th >Repeat  </th>
+                                                  <th >Category </th>
+                                                  <th>Comment</th>
+                                                  </tr>
                                         </thead>
                                         <tbody></tbody>
                               </table>
                     </div>
-                    
+          <!-- table for forecast -->
+                    <div class="forecastTable">
+                              <h1  onclick="toggleForecast()" >Forecast </h1>
+                              <table id="nextWeekForecastTable">
+                                        <thead>
+                                        <tr>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <!-- Rows will be dynamically added using JavaScript -->
+                                        </tbody>
+                              </table>
+                              
+                    </div>
           </div><br>
-<!-- table for forecast -->
-          <div>
-                    <h1 style="margin-left: 15%;">Forecast </h1>
-                    <table id="nextWeekForecastTable">
-                              <thead>
-                                <tr>
-                                  <th>Date</th>
-                                  <th>Amount</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <!-- Rows will be dynamically added using JavaScript -->
-                              </tbody>
-                            </table>
+          <script>
+                    function visitDashboard() {
+                              
+                              var x = document.getElementById("sidenavbar")
+                              if (x.style.display === "none") {
+                                x.style.display = "block";
+                              } else {
+                                x.style.display = "none";
+                              }
+                    }
+                    function toggleLastyear() {
+                              
+                              var x = document.getElementById("data-table-lastYear")
+                              if (x.style.display === "none") {
+                                x.style.display = "block";
+                              } else {
+                                x.style.display = "none";
+                              }
+                    }
+
+                    function toggleForecast() {
+                              var x = document.getElementById("nextWeekForecastTable");
                             
-          </div>
+                              if (x.style.display === "none") {
+                                x.style.display = "block";
+                              } else {
+                                x.style.display = "none";
+                              }
+                    }
+          </script>
           
           <script src="../controllers/periodsLastYear.js"></script>
           <script src="../controllers/periodsLastMonth.js"></script>
