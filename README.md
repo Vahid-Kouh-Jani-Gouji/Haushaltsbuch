@@ -5,9 +5,10 @@
 
 Check out the live demo of my app: [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/homepage.html)
 
-# To use this App follwe this steps : 
+# To use this App follow this steps : 
   - click on the  [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/homepage.html)
   - in Home page click on Register 
+  - enter verify code from your Email to end the register process 
   
   or if you don't would like to register
   - click on this link [Directly Link](https://main.d20ldbddf5hcx2.amplifyapp.com/view/wizard.html)
