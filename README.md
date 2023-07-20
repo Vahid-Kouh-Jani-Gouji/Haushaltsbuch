@@ -3,7 +3,7 @@
 
 ## Demo
 
-Check out the live demo of my app: [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/)
+Check out the live demo of my app: [Demo Link](https://main.d20ldbddf5hcx2.amplifyapp.com/homepage.html)
 
 
 ![Money stats Entity](./src/image/HaushaltsbuchEntity.png)
