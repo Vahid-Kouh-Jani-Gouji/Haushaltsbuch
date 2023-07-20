@@ -15,6 +15,20 @@ Check out the live demo of my app: [Demo Link](https://main.d20ldbddf5hcx2.ampli
 
 ![Money stats Entity](./src/image/HaushaltsbuchEntity.png)
 
+# Feature of this App :
+Presently :
+  - user very easy can input data for his expense and his income .
+  - user is able to enter his categories regard of his transactions  (Salary , side Job , Groceries,haous, ...).
+  - variety select for periods of transactions (monthly , weekly , ...) . 
+  - In the dashboard there is a facility response of all transactions .
+  - In transaction page there is search fields to have a nice view for preferred transactions .
+  - There is notification page to alarm user ( if balance is below 200 ) .
+  - User would be register in AWS Cognito user pool (high credential algorithm)
+  - In addition app is deployed with AWS Amplify (very efficient for CI/CD)
+
+In Future :
+  - User can scan his Document and give it as image to app and then app can automatically fetch data from the image and fill the form and edit them .
+
 
 # Data Structure :
 

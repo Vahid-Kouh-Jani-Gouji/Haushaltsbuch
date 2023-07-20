@@ -35,9 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
        
         // add the value from transactions
    
-        sum =+ transactionValue ;
-        //set to local storage
-        localStorage.setItem("saldo", JSON.stringify(sum));
+        sum += transactionValue ;
         // Create a new row for the sum
         var sumRow = document.createElement("tr");
         // Create an empty cell for the label
