@@ -1,5 +1,5 @@
 # This app can be used as a Money stats :) 
- I didnt use Bootstrap or any external bibliotek 
+ I didnt use Bootstrap or any external library
 
 ## Demo
 
